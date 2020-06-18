@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Mohamed's Barbershop</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+	<script src="https://unpkg.com/jquery-input-mask-phone-number@1.0.11/dist/jquery-input-mask-phone-number.js"></script>
+	<script>
+		//a partir de https://www.npmjs.com/package/jquery-input-mask-phone-number/v/1.0.10
+        $(document).ready(function () {
+            $('#phone').usPhoneFormat({
+                format: '(xxx) xxx-xxxx',
+            });
+        });
+    </script>
+	<script>jQuery(document).trigger("enhance");</script>
+
+</head>
+
+<body style="background-color:#ebebe0;">
+
+	<style>
+	.container {
+		position: relative;
+		font-family: Century Gothic;
+	}
+	.text-block {
+		position: absolute;
+		bottom: 20px;
+		right: 20px;
+		color: white;
+		background-color: #0077b3;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	</style>
+  
+    <div class="jumbotron p-3 my-3 text-white">
+		<img src="haircut.png" alt="Card image">
+        <h1 class="text-info">Bienvenue au salon de Mohamed</h1>
+		<nav class="navbar navbar-expand-sm">
+		  <ul class="navbar-nav">
+			<li class="nav-item">
+			  <a href="#imagee" data-toggle="tooltip" title="Move to location section"><button type="button" class="btn btn-outline-info" style="margin-left:0px;">Notre location</button><a>
+			</li>
+			<li class="nav-item">
+			  <a href="#offerr" data-toggle="tooltip" title="Move to see our offer"><button type="button" class="btn btn-outline-info" style="margin-left:10px;">Notre offre</button></a>
+			</li>
+			<li class="nav-item">
+			  <a href="#pricin" data-toggle="tooltip" title="Move to see the prices"><button type="button" class="btn btn-outline-info" style="margin-left:15px;">Nos prix</button></a>
+			</li>
+			<li class="nav-item">
+			  <a href="#appoint" data-toggle="tooltip" title="Move to book an appointment"><button type="button" class="btn btn-outline-info" style="margin-left:20px;">Rendez-vous</button></a>
+			</li>
+			<li class="nav-item">
+			  <a href="#teamm"><button type="button" class="btn btn-outline-info" style="margin-left:25px;">Notre Équipe</button></a>
+			</li>
+			<li class="nav-item">
+			  <a href="#bouttaus"><button type="button" class="btn btn-outline-info" style="margin-left:30px;">Qui sommes-nous?</button></a>
+			</li>
+		  </ul>
+		  <form class="form-inline" action="/action_page.php" style="margin-left:160px;">
+			<input class="form-control mr-sm-2" type="text" placeholder="Mot-clé">
+			<button class="btn btn-info" type="submit">Recherche</button>
+		  </form>	
+		</nav>
+    </div>
+
+	<div class="alert alert-danger alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>Info COVID! </strong>Avec l'autorisation du gouvernement le salon peut réouvrir, veuillez réserver un rendez-vous pour nous aider à organiser un environnement sain.
+    </div>
+
+	<div class="container">
+		<img src="coif.jpg" id="imagee" style="width:100%; margin-left:1px;">
+		<div class="text-block" data-toggle="tooltip" title="Our location.">
+			<h4>Salon de coiffure</h4>
+			<p>777 King Edward St.</p>
+		</div>
+	</div>
+	
+	
+	<br>
+	
+	<div class="container" id="offerr">
+        <h2>Notre offre</h2> 
+        <div id="accordion">
+            <div class="card">
+                <div class="card-header">
+					<img src="gerg.png" alt="haircutIcon" style="width:40px;">
+                    <a class="card-link" data-toggle="collapse" href="#collapseService" data-toggle="tooltip" title="What we can offer you">Vos options</a>
+                </div>
+                <div id="collapseService" class="collapse show" data-parent="#accordion">
+                    <div class="card-body">
+						<div class="card-deck">
+							<div class="card bg-info" style="width:50%;">
+								<img class="card-img-top" src="cut.jpg">
+								<div class="card-body">
+									<h4 class="card-title" style="text-align:center;">Coupe de cheveux</h4>
+								</div>
+							</div>
+							<div class="card bg-info" style="width:50%;">
+								<img class="card-img-top" src="trim.jpg">
+								<div class="card-body">
+									<h4 class="card-title" style="text-align:center;">Coupe de barbe</h4>
+								</div>
+							</div>
+							<div class="card bg-info" style="width:50%;">
+								<img class="card-img-top" src="color.jpg">
+								<div class="card-body">
+									<h4 class="card-title" style="text-align:center;">Coloration</h4>
+								</div>
+							</div>
+							<div class="card bg-info" style="width:50%;">
+								<img class="card-img-top" src="scalp.jpg">
+								<div class="card-body">
+									<h4 class="card-title" style="text-align:center;">Traitement de cuir chevelu</h4>
+								</div>
+							</div>
+						</div>
+                    </div>
+                </div>
+			</div>
+		</div>
+	</div>
+
+    <div class="container" id="pricin">
+        <h2>Nos Prix</h2>          
+        <table class="table table-info">
+            <thead>
+            <tr>
+                <th>Service</th>
+                <th>Prix</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Coupe de cheveux</td>
+                <td>À partir de 40$</td>
+            </tr>
+            <tr>
+                <td>Coupe de barbe</td>
+                <td>À partir de 30$</td>
+            </tr>
+            <tr>
+                <td>Coloration de cheveux</td>
+                <td>À partir de 70$</td>
+            </tr>
+			<tr>
+                <td>Traitement de cuir chevelu</td>
+                <td>À partir de 30$</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    
+
+    <div class="container" id="appoint">
+        <h2>Réservation de rendez-vous</h2> 
+        <div id="accordion">
+            <div class="card">
+                <div class="card-header">
+					<img src="appointment.png" alt="appointm" style="width:40px;">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseDate" data-toggle="tooltip" title="Pick your date and your specialist.">Choisissez les détails de votre rendez-vous</a>
+                </div>
+                <div id="collapseDate" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        <div class="form-group row">
+                            <label for="dateTimeInput" class="col-2 col-form-label">Date et heure</label>
+                            <div class="col-10" data-toggle="tooltip" title="Choose a date">
+                                <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="dateTimeInput" >
+                            </div>
+                        </div>
+						<div class="dropdown" data-toggle="tooltip" title="Choose your treatment.">
+							<label class="col-2 col-form-label">Que recherchez-vous?</label>
+							<button type="button" class="btn btn-muted dropdown-toggle" data-toggle="dropdown"></button>
+							<div class="dropdown-menu">
+								<a class="dropdown-item">Coupe de cheveux</a>
+								<a class="dropdown-item">Coupe de barbe</a>
+								<a class="dropdown-item">Coloration de cheveux</a>
+								<a class="dropdown-item">Traitement de cuir chevelu</a>
+							</div>
+						</div>
+						<div class="dropdown" data-toggle="tooltip" title="Choose your specialist.">
+							<label class="col-2 col-form-label">Choisissez votre specialiste</label>
+							<button type="button" class="btn btn-muted dropdown-toggle " data-toggle="dropdown"></button>
+							<div class="dropdown-menu">
+								<a class="dropdown-item">Edna Connor, Styliste senior</a>
+								<a class="dropdown-item">Anna Chapman, Stylist intermediaire</a>
+								<a class="dropdown-item">Cienna Mckenzie, Estheticienne</a>
+								<a class="dropdown-item">John Doe, Stylist intermediaire</a>
+							</div>
+						</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+					<img src="credential.png" alt="personnalInfo" style="width:40px;">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseClientInfo" data-toggle="tooltip" title="Enter the required information">Vos informations</a>
+                </div>
+                <div id="collapseClientInfo" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        <form>
+							<div class="form-group" data-toggle="tooltip" title="Entrez Nom et Prénom">
+							  <label>Nom et Prénom:</label>
+							  <input type="text" class="form-control" placeholder="Entrez Nom et Prénom" required>
+							</div>
+							<div class="form-group" data-toggle="tooltip" title="Enter your phone number.">
+							  <label>Numero de téléphone:</label>
+							  <input type="text" id="phone" class="form-control" placeholder="Entrez votre numero de téléphone" required>
+							</div>
+							<div class="form-group" data-toggle="tooltip" title="Entrez votre numero de téléphone">
+							  <label>Courriel:</label>
+							  <input type="text" class="form-control" placeholder="Entrez votre courriel" required>
+							</div>
+							<button type="submit" class="btn btn-info" data-toggle="tooltip" title="Soumettre toute l'information.">Soumettre</button>
+						</form>	
+					</div>	
+				</div>	
+				<div class="card-header">
+					<img src="payment.png" alt="paymentInfo" style="width:40px;">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseClientInfo" data-toggle="tooltip" title="Pour une annulation de dernière minute">Information de paiement</a>
+                </div>
+				<div id="collapseClientInfo" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+						<form>
+							<label>Way of payment</label>
+							<button type="button" class="btn btn-muted dropdown-toggle " data-toggle="dropdown"></button>
+							<div class="dropdown-menu">
+								<a class="dropdown-item">Carte de crédit</a>
+								<a class="dropdown-item">Carte de débit</a>
+							</div>
+							<br>
+							<div class="input-group mb-3">
+							  <div class="input-group-prepend">
+								<span class="input-group-text">Carte#</span>
+							  </div>
+							  <input type="text" id="cartepaie" class="form-control" placeholder="XXXX-XXXX-XXXX-XXXX" data-toggle="tooltip" title="Entrez les chiffres selon le format" required>
+							  <div class="input-group-prepend">
+								<span class="input-group-text">CVV#</span>
+							  </div>
+							  <input type="text" class="form-control" placeholder="XXX" data-toggle="tooltip" title="Entrez les chiffres selon le format" required>
+							  <div class="input-group-prepend">
+								<span class="input-group-text">Date d'expiration</span>
+							  </div>
+							  <input class="form-control" type="datetime-local" value="2020-06-22T23:45:00" id="dateTimeInput" data-toggle="tooltip" title="Entrez la date d'expiration de la carte." required>
+							</div>
+							<button type="submit" class="btn btn-info" data-toggle="tooltip" title="Soumettre toute l'information.">Soumettre</button>
+						</form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	
+	<br>
+	
+	
+	<div class="container" id="teamm">
+        <h2>Notre équipe</h2> 
+        <div id="accordion">
+            <div class="card">
+                <div class="card-header">
+					<img src="servic.png" alt="members" style="width:40px;">
+                    <a class="card-link" data-toggle="collapse" href="#collapseService" data-toggle="tooltip" title="Notre équipe prendra soin de vous.">Nos membres</a>
+                </div>
+                <div id="collapseService" class="collapse show" data-parent="#accordion">
+                    <div class="card-body">
+						<div class="card-deck">
+							<div class="card bg-info" style="width:50%;">
+								<img class="card-img-top" src="staff1.jpg">
+								<div class="card-body">
+									<p2><strong>Edna Connor</strong></p2>
+									<br>
+									<p2>Styliste senior</p2>
+								</div>
+							</div>
+							<div class="card bg-info" style="width:50%;">
+								<img class="card-img-top" src="staff2.png">
+								<div class="card-body">
+									<p2><strong>Anna Chapman</strong></p2>
+									<br>
+									<p2>Styliste intermediaire</p2>
+								</div>
+							</div>
+							<div class="card bg-info" style="width:50%;">
+								<img class="card-img-top" src="staff3.png">
+								<div class="card-body">
+									<p2><strong>Cienna Mckenzie</strong></p2>
+									<p2>Esthéticienne</p2>
+								</div>
+							</div>
+							<div class="card bg-info" style="width:50%;">
+								<img class="card-img-top" src="staff4.png">
+								<div class="card-body">
+									<p2><strong>John Doe</strong></p2> 
+									<br>
+									<p2>Styliste Intermediaire</p2>
+								</div>
+							</div>
+						</div>
+                    </div>
+                </div>
+			</div>
+		</div>
+	</div>
+	
+	
+	<div class="container" id="bouttaus">
+        <div id="accordion">
+            <div class="card">
+                <div class="card-header">
+					<img src="bouttaus.png" alt="About us" style="width:40px;">
+                    <a class="card-link" style="color:#0077b3;" data-toggle="tooltip" title="Qui sommes-nous?">Qui sommes-nous?</a>
+                </div>
+             <p style="margin-left:10px;">Que vous souhaitiez essayer une nouvelle coupe de cheveux, vous faire tailler la barbe, vous colorer les cheveux ou vous faire faire un traitement du cuir chevelu, notre équipe veillera toujours à ce que vous quittiez notre magasin avec un sourire sur le visage.</mark></p>
+			</div>
+		</div>
+	</div>
+	
+	<p>Site créé par Mohamed Labzagui</p>
+
+</body>
+</html>
